@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>fhb</groupId>
-    <artifactId>MavenGradleExample</artifactId>
+    <artifactId>MavenGroovyExample</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
@@ -13,17 +13,18 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <!-- DEPENDENCIES -->
-        <java.version>1.7</java.version>
-        <groovy.version>2.1.5</groovy.version>
+        <java.version>1.8</java.version>
+        <groovy.version>2.4.4</groovy.version>
 
         <!-- TEST DEPENDENCIES -->
-        <spock.version>0.7-groovy-2.0</spock.version>
-        <cglib.version>2.2.2</cglib.version>
+        <spock.version>1.0-groovy-2.4</spock.version>
+        <cglib.version>3.1</cglib.version>
 
         <!-- PLUGINS -->
-        <compiler.version>3.1</compiler.version>
-        <groovy.eclipse.compiler.version>2.7.0-01</groovy.eclipse.compiler.version>
-        <surefire.version>2.13</surefire.version>
+        <compiler.version>3.3</compiler.version>
+        <groovy.eclipse.compiler.version>2.9.2-01</groovy.eclipse.compiler.version>
+        <groovy.eclipse.batch.version>2.4.3-01</groovy.eclipse.batch.version>
+        <surefire.version>2.19</surefire.version>
      </properties>
 
     <dependencies>
@@ -65,8 +66,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${compiler.version}</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                     <encoding>${project.build.sourceEncoding}</encoding>
                     <compilerId>groovy-eclipse-compiler</compilerId>
                 </configuration>
@@ -76,6 +77,11 @@
                         <groupId>org.codehaus.groovy</groupId>
                         <artifactId>groovy-eclipse-compiler</artifactId>
                         <version>${groovy.eclipse.compiler.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.codehaus.groovy</groupId>
+                        <artifactId>groovy-eclipse-batch</artifactId>
+                        <version>${groovy.eclipse.batch.version}</version>
                     </dependency>
                 </dependencies>
             </plugin>

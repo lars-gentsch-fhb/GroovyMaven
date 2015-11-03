@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>fhb</groupId>
-    <artifactId>MavenGradleExample</artifactId>
+    <artifactId>MavenGroovyExample</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
@@ -21,8 +21,9 @@
         <cglib.version>3.1</cglib.version>
 
         <!-- PLUGINS -->
-        <compiler.version>3.1</compiler.version>
+        <compiler.version>3.3</compiler.version>
         <groovy.eclipse.compiler.version>2.9.2-01</groovy.eclipse.compiler.version>
+        <groovy.eclipse.batch.version>2.4.3-01</groovy.eclipse.batch.version>
         <surefire.version>2.19</surefire.version>
      </properties>
 
@@ -67,8 +68,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${compiler.version}</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                     <encoding>${project.build.sourceEncoding}</encoding>
                     <compilerId>groovy-eclipse-compiler</compilerId>
                     <verbose>true</verbose>
@@ -83,7 +84,7 @@
                     <dependency>
                     	<groupId>org.codehaus.groovy</groupId>
         				<artifactId>groovy-eclipse-batch</artifactId>
-       					<version>2.4.3-01</version>
+                        <version>${groovy.eclipse.batch.version}</version>
                     </dependency>
                 </dependencies>
             </plugin>
