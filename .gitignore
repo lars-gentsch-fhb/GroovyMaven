@@ -1,3 +1,7 @@
+MavenGroovyExample.iml
+MavenGradleExample.iml
+src/main/main.iml
+src/test/test.iml
 .DS_Store
 .classpath
 .project
@@ -6,4 +10,4 @@
 target
 bin
 .idea/
-MavenGradleExample.iml
+out

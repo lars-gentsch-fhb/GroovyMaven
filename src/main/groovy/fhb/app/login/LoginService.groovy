@@ -1,8 +1,8 @@
 package fhb.app.login
 
 class LoginService {
-    static final AUTHENTICATED = true
-    static final NOT_AUTHENTICATED = false
+    static final Boolean AUTHENTICATED = true
+    static final Boolean NOT_AUTHENTICATED = false
 
     Boolean login(String username, String password) {
         if (username == 'hans' && password == 'wurst') {
